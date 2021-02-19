@@ -4,7 +4,7 @@
    - bosh 설치
    - PaaS-TA 설치
    - PaaS-TA 까지 설치 시 네트워크 구성도 및 필요 리소스
-   - 발생 한 오류
+   - 발생 한 오류  해결
    
 # 사전 환경 설정
    - 컴퓨터 bios상에서 Intel VT-x/EPT or AMD-V/RVI 활성화
@@ -192,7 +192,38 @@
    
       ![image](https://user-images.githubusercontent.com/58166973/108471095-41efdc00-72ce-11eb-8871-3f489c3879fa.png)
        
-       
+# 발생 한 오류 및 해결
+   - devstack 설치 시 발생하는 오류 및 해결방안
+     - 퍼미션 오류
+      - sudo chown -R stack:stack /opt/stack
+      
+     - simplejson 오류
+      - sudo apt purge -y python3-simplejson
+     
+     - XDG_SESSION_TYPE 오류
+      - export XDG_SESSION_TYPE=wayland
+
+   - bosh 설치 시 오류 및 해결
+      -	deploy-openstack.sh 파일내의 net id 가 달라 발생하는 오류
+      
+           ![image](https://user-images.githubusercontent.com/58166973/108470793-d7d73700-72cd-11eb-8516-40dc653d262b.png)
+           - 해결: net id의 경우 public이 아닌 생성한 네트워크 subnet의 net id로 설정
+
+      -	리소스 자원 부족으로 인한 오류
+      
+           ![image](https://user-images.githubusercontent.com/58166973/108470831-e1f93580-72cd-11eb-9ea5-801fc6b9c440.png)
+           - 해결: VMware Vcpu, ram 등 리소스 자원 재할당
+
+   - PaaS-TA 설치 시 오류 및 해결
+      -	cloud-config/openstack-cloud-config.yml 파일 내의 네트워크 가용존 subnet 오류
+      
+           ![image](https://user-images.githubusercontent.com/58166973/108470793-d7d73700-72cd-11eb-8516-40dc653d262b.png)
+           - 해결: 파일 내의 가용존 subnet 범위를 다 다르게 적용해서 해결
+
+      -	리소스 자원 부족으로 인한 오류
+      
+           ![image](https://user-images.githubusercontent.com/58166973/108470831-e1f93580-72cd-11eb-9ea5-801fc6b9c440.png)
+           - 해결: VMware Vcpu, ram 등 리소스 자원 재할당
 
 
 
