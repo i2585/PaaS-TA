@@ -56,17 +56,32 @@
          
       - 내부 네트워크 생성
 
-         ![image](https://user-images.githubusercontent.com/58166973/108470729-bece8600-72cd-11eb-9c18-a390062ba8c3.png)
+   ![image](https://user-images.githubusercontent.com/58166973/108470729-bece8600-72cd-11eb-9c18-a390062ba8c3.png)
          
       - 라우터 생성 후 외부네트워크와 내부 네트워크 연결
+     
+   ![image](https://user-images.githubusercontent.com/58166973/108470743-c2620d00-72cd-11eb-9158-de07aeadcbe5.png)
       
-         ![image](https://user-images.githubusercontent.com/58166973/108470743-c2620d00-72cd-11eb-9158-de07aeadcbe5.png)
-       
       - floating ip 생성
       
-          ![image](https://user-images.githubusercontent.com/58166973/108470772-cdb53880-72cd-11eb-99df-e1db7d2dedbf.png)
+   ![image](https://user-images.githubusercontent.com/58166973/108470772-cdb53880-72cd-11eb-99df-e1db7d2dedbf.png)
    
+      - ubuntu 상에서 라우터 gate way 설정
+         netstat -rn (라우팅 테이블 확인)
+         sudo route add default gw x.x.x.x
+   
+   # bosh 설치
+      - bosh cli 설치
+      
+   ![image](https://user-images.githubusercontent.com/58166973/108470786-d3128300-72cd-11eb-9ceb-6a988c0a4740.png)
+   
+      - 종속성 파일 설치
+   
+   ![image](https://user-images.githubusercontent.com/58166973/108470793-d7d73700-72cd-11eb-8516-40dc653d262b.png)
+   
+      - deploy-openstack.sh 파일의 bosh 설치 시 필요한 설정 (
 
+   ![image](https://user-images.githubusercontent.com/58166973/108470831-e1f93580-72cd-11eb-9ea5-801fc6b9c440.png)
 
 
 
