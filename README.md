@@ -73,7 +73,7 @@
    # bosh 설치
    - bosh cli 설치
       
-![image](https://user-images.githubusercontent.com/58166973/108470793-d7d73700-72cd-11eb-8516-40dc653d262b.png)
+![image](https://user-images.githubusercontent.com/58166973/108470772-cdb53880-72cd-11eb-99df-e1db7d2dedbf.png)
    
    - 종속성 파일 설치
    
