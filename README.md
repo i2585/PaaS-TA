@@ -64,30 +64,54 @@
       
    - floating ip 생성
       
-   ![image](https://user-images.githubusercontent.com/58166973/108470772-cdb53880-72cd-11eb-99df-e1db7d2dedbf.png)
+  ![image](https://user-images.githubusercontent.com/58166973/108470755-c68e2a80-72cd-11eb-9344-9aab49f73769.png)
    
    - ubuntu 상에서 라우터 gate way 설정
        - netstat -rn (라우팅 테이블 확인)
        - sudo route add default gw x.x.x.x
-   
-   # bosh 설치
+      
+# bosh 설치
    - bosh cli 설치
       
 ![image](https://user-images.githubusercontent.com/58166973/108470772-cdb53880-72cd-11eb-99df-e1db7d2dedbf.png)
    
    - 종속성 파일 설치
    
-
+![image](https://user-images.githubusercontent.com/58166973/108470777-cf7efc00-72cd-11eb-8975-8cb748b3af81.png)
    
-   - deploy-openstack.sh 파일의 bosh 설치 시 필요한 설정 (
+   - deploy-openstack.sh 파일의 bosh 설치 시 필요한 설정 (Openstack 설정에 맞게 적재)
 
+![image](https://user-images.githubusercontent.com/58166973/108470786-d3128300-72cd-11eb-9ceb-6a988c0a4740.png)
 
+   - bosh 설치 및 완료
+      - ./deploy-openstack.sh
+      
+      - 설치 완료시 openstack에 생성되는 인스턴스
+      
+      ![image](https://user-images.githubusercontent.com/58166973/108470842-e6bde980-72cd-11eb-9bd9-f94239f778fb.png)
+      
+   - bosh login
+      - Alias 설정
+      
+      ![image](https://user-images.githubusercontent.com/58166973/108470849-e9204380-72cd-11eb-9bc2-affb1935aaef.png)
+      
+      - bosh login shell 스크립트 생성
+        - login.sh
+        
+         ![image](https://user-images.githubusercontent.com/58166973/108470868-ef162480-72cd-11eb-8c6b-c233a2da8907.png)
 
+      - bosh login
 
+      ![image](https://user-images.githubusercontent.com/58166973/108470870-f0475180-72cd-11eb-982f-45507adfc2a8.png)
 
+      - bosh login 확인
+      
+      ![image](https://user-images.githubusercontent.com/58166973/108470880-f3dad880-72cd-11eb-9255-74d914a1a0ac.png)
+      
+      - jumpbox key 생성
 
-
-
+      ![image](https://user-images.githubusercontent.com/58166973/108470886-f5a49c00-72cd-11eb-8d97-bcc8b0fb1ca5.png)
+      
 
 
 
