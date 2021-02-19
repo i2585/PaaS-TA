@@ -139,14 +139,14 @@
      - ===========================================
      - as-is
       - vm_type:
-     	 -  name: minimal
-       	 -  cloud_properties:
-     	 -  instance_type: m1.tiny
+      -  name: minimal
+      -  cloud_properties:
+      -  instance_type: m1.tiny
      - to-be - 컴퓨터 사양에 따라 ds1G 이상 사용
       - vm_type:
-   	  - name: minimal
-   	  -  cloud_properties:
-   	  -  instance_type: ds1G
+      - name: minimal
+      -  cloud_properties:
+      -  instance_type: ds1G
      - ===========================================
      - bosh -e micro-bosh update-cloud-config openstack-cloud-config.yml (업데이트)
 
@@ -176,7 +176,7 @@
        
    - PaaS-TA 설치 완료
    
-   	![image](https://user-images.githubusercontent.com/58166973/108471039-313f6600-72ce-11eb-9b0a-a9eee387357a.png)
+      ![image](https://user-images.githubusercontent.com/58166973/108471039-313f6600-72ce-11eb-9b0a-a9eee387357a.png)	
       
    - PaaS-TA 설치 확인
 
