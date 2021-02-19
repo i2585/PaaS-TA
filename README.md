@@ -23,10 +23,10 @@
      - sudo apt-get upgrade -y
 
   - github에서 클론하기 위한 git설치
-      sudo apt install git -y
+     - sudo apt install git -y
 
   - ifconfig 사용을 위한 넷툴 설치
-      sudo apt install net-tools
+     - sudo apt install net-tools
 
   - 사용자 생성
      - sudo useradd -s /bin/bash -d /opt/stack -m stack
