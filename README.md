@@ -48,11 +48,11 @@
    # Openstack 환경설정
       - key pair 생성
 
-         ![image](https://user-images.githubusercontent.com/58166973/108470713-b9713b80-72cd-11eb-85cd-0bd89f3902d8.png)
+  ![image](https://user-images.githubusercontent.com/58166973/108473515-7913bc80-72d1-11eb-84d1-409d367e9c8f.png)
          
       - 보안그룹 생성
 
-         ![image](https://user-images.githubusercontent.com/58166973/108470720-bb3aff00-72cd-11eb-87a6-00ed41098ccf.png)
+   ![image](https://user-images.githubusercontent.com/58166973/108470720-bb3aff00-72cd-11eb-87a6-00ed41098ccf.png)
          
       - 내부 네트워크 생성
 
