@@ -196,13 +196,13 @@
 # 발생 한 오류 및 해결
    - devstack 설치 시 발생하는 오류 및 해결방안
      - 퍼미션 오류
-      - sudo chown -R stack:stack /opt/stack
+       - sudo chown -R stack:stack /opt/stack
       
      - simplejson 오류
-      - sudo apt purge -y python3-simplejson
+       - sudo apt purge -y python3-simplejson
      
      - XDG_SESSION_TYPE 오류
-      - export XDG_SESSION_TYPE=wayland
+       - export XDG_SESSION_TYPE=wayland
 
    - bosh 설치 시 오류 및 해결
       -	deploy-openstack.sh 파일내의 net id 가 달라 발생하는 오류
