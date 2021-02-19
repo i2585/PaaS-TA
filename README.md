@@ -138,15 +138,15 @@
      - vi openstack-cloud-config.yml
      - ===========================================
      - as-is
-     - vm_type:
-     -  name: minimal
-     -  cloud_properties:
-     -   instance_type: m1.tiny
-     -   to-be - 컴퓨터 사양에 따라 ds1G 이상 사용
-     - vm_type:
-     -  name: minimal
-     -  cloud_properties:
-     -  instance_type: ds1G
+      - vm_type:
+     	 -  name: minimal
+       	 -  cloud_properties:
+     	 -  instance_type: m1.tiny
+     - to-be - 컴퓨터 사양에 따라 ds1G 이상 사용
+      - vm_type:
+   	  - name: minimal
+   	  -  cloud_properties:
+   	  -  instance_type: ds1G
      - ===========================================
      - bosh -e micro-bosh update-cloud-config openstack-cloud-config.yml (업데이트)
 
@@ -176,11 +176,11 @@
        
    - PaaS-TA 설치 완료
    
-      ![image](https://user-images.githubusercontent.com/58166973/108471008-25ec3a80-72ce-11eb-9c25-6a70d0e7b671.png)
+   	![image](https://user-images.githubusercontent.com/58166973/108471039-313f6600-72ce-11eb-9b0a-a9eee387357a.png)
       
    - PaaS-TA 설치 확인
 
-      ![image](https://user-images.githubusercontent.com/58166973/108471020-2a185800-72ce-11eb-942a-0eaac21e5b5f.png)
+      ![image](https://user-images.githubusercontent.com/58166973/108471049-34d2ed00-72ce-11eb-99f8-9c31b1a30379.png)
       
 # PaaS-TA 까지 설치 시 네트워크 구성도 및 필요 리소스
    - <네트워크 구성도>
