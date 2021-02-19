@@ -1,5 +1,6 @@
 # Openstack PaaS-TA 
    - Openstack 설치
+   - Openstack 환경설정
    - bosh 설치
    - PaaS-TA 설치
    
@@ -44,7 +45,26 @@
   
       ![image](https://user-images.githubusercontent.com/58166973/108470675-ad857980-72cd-11eb-8fc9-6c0f0aac29d8.png)
       
-   # bosh 설치
+   # Openstack 환경설정
+      - key pair 생성
+
+         ![image](https://user-images.githubusercontent.com/58166973/108470713-b9713b80-72cd-11eb-85cd-0bd89f3902d8.png)
+         
+      - 보안그룹 생성
+
+         ![image](https://user-images.githubusercontent.com/58166973/108470720-bb3aff00-72cd-11eb-87a6-00ed41098ccf.png)
+         
+      - 내부 네트워크 생성
+
+         ![image](https://user-images.githubusercontent.com/58166973/108470729-bece8600-72cd-11eb-9c18-a390062ba8c3.png)
+         
+      - 라우터 생성 후 외부네트워크와 내부 네트워크 연결
+      
+         ![image](https://user-images.githubusercontent.com/58166973/108470743-c2620d00-72cd-11eb-9158-de07aeadcbe5.png)
+       
+      - floating ip 생성
+      
+          ![image](https://user-images.githubusercontent.com/58166973/108470772-cdb53880-72cd-11eb-99df-e1db7d2dedbf.png)
    
 
 
