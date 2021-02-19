@@ -217,18 +217,20 @@
    - PaaS-TA 설치 시 오류 및 해결
       -	cloud-config/openstack-cloud-config.yml 파일 내의 네트워크 가용존 subnet 오류
       
-           ![image](https://user-images.githubusercontent.com/58166973/108470793-d7d73700-72cd-11eb-8516-40dc653d262b.png)
+           ![image](https://user-images.githubusercontent.com/58166973/108479859-98164c80-72d9-11eb-9f6a-3a7d3fd327b8.png)
            - 해결: 파일 내의 가용존 subnet 범위를 다 다르게 적용해서 해결
 
-      -	리소스 자원 부족으로 인한 오류
+      - html 400 오류
       
-           ![image](https://user-images.githubusercontent.com/58166973/108470831-e1f93580-72cd-11eb-9ea5-801fc6b9c440.png)
-           - 해결: VMware Vcpu, ram 등 리소스 자원 재할당
+           ![image](https://user-images.githubusercontent.com/58166973/108471008-25ec3a80-72ce-11eb-9c25-6a70d0e7b671.png)
+           - 해결: bosh 로그인 확인 또는 재로그인 시 해결
+      
+      - openstack 내부 네트워크에 subnet이 할당되지 않아 발생한 오류
+      
+           ![image](https://user-images.githubusercontent.com/58166973/108471020-2a185800-72ce-11eb-942a-0eaac21e5b5f.png)
+           - 해결: openstack 내부 네트워크에 subnet 설정 후 라우터 인터페이스 연결
 
-
-
-
-
-
-
-
+      - vm 생성시 이미지 사이즈 보다 설정된 flavor 하드 용량이 작을 경우
+      
+           ![image](https://user-images.githubusercontent.com/58166973/108471030-2d134880-72ce-11eb-9d21-6a031fc74609.png)
+           - 해결: cloud-config 파일 instance_type 설정 값을 ds1G 변경
