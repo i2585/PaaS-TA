@@ -1,5 +1,8 @@
 # Openstack PaaS-TA 
-
+   - Openstack 설치
+   - bosh 설치
+   - PaaS-TA 설치
+   
 # 사전 환경 설정
    - 컴퓨터 bios상에서 Intel VT-x/EPT or AMD-V/RVI 활성화
    - VMware 생성시 필요 자원 (PaaS-TA까지 설치 시 필요한 최소 자원)
@@ -38,4 +41,27 @@
     ./clean.sh
   
   - Openstack 설치 완료
+  
       ![image](https://user-images.githubusercontent.com/58166973/108470675-ad857980-72cd-11eb-8fc9-6c0f0aac29d8.png)
+      
+   # bosh 설치
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
