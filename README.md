@@ -172,8 +172,9 @@
    - PaaS-TA 배포
       - cd ~/workspace/paasta-5.0/deployment/paasta-deployment
       - vi deploy-openstack.sh
-         - ![image](https://user-images.githubusercontent.com/58166973/108470969-1a007880-72ce-11eb-8264-cf3cecb44548.png)
-       
+      		
+	  ![image](https://user-images.githubusercontent.com/58166973/108470969-1a007880-72ce-11eb-8264-cf3cecb44548.png)
+
    - PaaS-TA 설치 완료
    
       ![image](https://user-images.githubusercontent.com/58166973/108471039-313f6600-72ce-11eb-9b0a-a9eee387357a.png)	
