@@ -1,0 +1,82 @@
+[[local|localrc]]
+ADMIN_PASSWORD=<PASSWORD>
+DATABASE_PASSWORD=$ADMIN_PASSWORD
+RABBIT_PASSWORD=$ADMIN_PASSWORD
+SERVICE_PASSWORD=$ADMIN_PASSWORD
+HOST_IP=<IP>
+SERVICE_HOST=<IP>
+MYSQL_HOST=<IP>
+RABBIT_HOST=<IP>
+GLANCE_HOSTPORT=<IP>
+
+LOGDIR=$DEST/logs
+LOGFILE=$LOGDIR/stack.sh.log
+LOGDAYS=7
+
+# Do not use Nova-Network
+disable_service n-net
+
+# Neutron service
+enable_service q-svc
+enable_service q-agt
+enable_service q-dhcp
+enable_service q-l3
+enable_service q-meta
+
+# Neutron options
+Q_USE_SECGROUP=True
+FLOATING_RANGE="subnet"
+IPV4_ADDRS_SAFE_TO_USE="subnet"
+Q_FLOATING_ALLOCATION_POOL=start=<IP>,end=<IP>
+PUBLIC_NETWORK_GATEWAY="<gateway>"
+PUBLIC_INTERFACE=<interface>
+Q_USE_PROVIDERNET_FOR_PUBLIC=True
+
+# Open vSwitch provider networking configuration
+OVS_PHYSICAL_BRIDGE=br-ex
+PUBLIC_BRIDGE=br-ex
+OVS_BRIDGE_MAPPINGS=public:br-ex
+
+# Linuxbridge Settings
+#Q_AGENT=linuxbridge
+#LB_PHYSICAL_INTERFACE=ens34
+#PUBLIC_PHYSICAL_NETWORK=default
+#LB_INTERFACE_MAPPINGS=default:ens34
+
+# Nova service
+enable_service n-api
+enable_service n-cpu
+enable_service n-cond
+enable_service n-sch
+enable_service n-novnc
+enable_service n-cauth
+
+# Cinder service
+enable_service c-api
+enable_service c-vol
+enable_service c-sch
+enable_service c-bak
+
+# Swift service
+enable_service s-proxy
+enable_service s-object
+enable_service s-container
+enable_service s-account
+
+# Cinder configuration
+VOLUME_GROUP="cinder-volumes"
+VOLUME_NAME_PREFIX="volume-"
+
+# Images
+#DOWNLOAD_DEFAULT_IMAGES=False
+#IMAGE_URLS="http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img"
+#KEYSTONE_CATALOG_BACKEND=sql
+#API_RATE_LIMIT=False
+#SWIFT_HASH=testing
+#SWIFT_REPLICAS=1
+#VOLUME_BACKING_FILE_SIZE=70000M
+
+# A clean install every time
+RECLONE=yes
+
+disable_service etcd3

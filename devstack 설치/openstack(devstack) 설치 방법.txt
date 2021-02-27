@@ -1,0 +1,90 @@
+#패키지 파일 업데이트 및 업그래이드
+sudo apt update
+sudo apt upgrade -y
+sudo apt dist-upgrade -y
+sudo apt-get update
+sudo apt-get upgrade -y
+
+#github에서 클론하기 위한 git설치
+sudo apt install git -y
+
+#ifconfig 사용을 위한 넷툴 설치
+sudo apt install net-tools
+
+# 사용자 생성
+sudo useradd -s /bin/bash -d /opt/stack -m stack
+echo "stack ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/stack
+sudo su - stack
+
+----------------------------------stack 유저----------------------------------
+
+git clone https://github.com/openstack-dev/devstack.git
+
+#로컬파일 생성(devstack 설치시 옵션사항 추가)
+vi local.conf
+
+./stack.sh
+
+---------------------------------에러발생시-----------------------------------
+<stack유저에서>
+#퍼미션 에러발생시
+sudo chown -R stack:stack /opt/stack
+
+#simplejson 에러
+sudo apt purge python3-simplejson -y
+
+#XDG_SESSION_TYPE 에러발생시
+export XDG_SESSION_TYPE=wayland
+
+#git call fail error (git의 명령어가 가끔 에러가 발생하는 경우가 있다고 한다)
+git config --global url."https://".insteadOf git://
+--------------------------------------------------------------------------------
+
+
+-------------------------------ubuntu 유저-----------------------------------
+#openstack에서 만든 키페어 저장을 위해 .ssh폴더 만들기
+ssh-keygen
+(계속 엔터키 누르기)
+
+#대시보드에서 키페어를 생성후 .ssh폴더로 옮기고 관리자 외에 접근 권한변경
+mv ~/Downloads/paasta.pem ~/.ssh/paasta.pem
+chmod -R 400 ~/.ssh/paasta.pem
+
+---------------------public 네트워크 게이트웨이 추가---------------------
+netstat -rn (라우팅 테이블 확인)
+sudo route add default gw x.x.x.x
+
+--------------------------------auth_url 확인--------------------------------
+sudo su - stack
+sudo su
+cd devstack
+source openrc
+env | grep -i url
+
+---------------------devstack 실시간 로그생성 명령어---------------------
+sudo journalctl -f -u devstack@n*
+
+-----------------------------screen 명령어 모음-----------------------------
+screen
+- 기본 세션 생성하기
+screen -S 이름(접속시 id도 가능)
+- 이름으로 세션 만들기, 이름에 해당하는 세션 접속하기
+screen -ls, -list
+- screen 목록 확인
+screen -r
+- 세션이 하나만 있을때 사용
+screen -r ID
+- ID 세션을 연결
+screen -d 이름
+- screen 연결 해제
+screen -X -S 이름 kill
+- screen 삭제
+
+ctrl-a Esc 스크롤 가능
+up, down, page up, page down 으로 스크롤
+Esc를 다시 누르면 스크롤 모드 종료
+
+--------------------------------스냅샷 설치--------------------------------
+sudo add-apt-repository -y ppa:teejee2008/ppa
+sudo apt-get update
+sudo apt-get install -y timeshift
