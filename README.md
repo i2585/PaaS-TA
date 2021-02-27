@@ -1,10 +1,10 @@
 # Openstack PaaS-TA 
-   - [Openstack 설치](# Openstack 설치)
-   - [Openstack 환경설정]
-   - [bosh 설치]
-   - PaaS-TA 설치
-   - PaaS-TA 까지 설치 시 네트워크 구성도 및 필요 리소스
-   - 발생 한 오류  해결
+   - [Openstack 설치](#-Openstack-설치)
+   - [Openstack 환경설정](#-Openstack-환경설정)
+   - [bosh 설치](#-bosh-설치)
+   - [PaaS-TA 설치](#-PaaS-TA-설치)
+   - [PaaS-TA 까지 설치 시 네트워크 구성도 및 필요 리소스](#-PaaS-TA-까지-설치-시-네트워크-구성도-및-필요-리소스)
+   - [발생 한 오류 및 해결](#-발생-한-오류-및-해결)
    
 # 사전 환경 설정
    - 컴퓨터 bios상에서 Intel VT-x/EPT or AMD-V/RVI 활성화
@@ -36,7 +36,7 @@
 ----------------------------------stack 유저----------------------------------
   - devstack 
      - git clone https://github.com/openstack-dev/devstack.git
-     - vi local.conf (https://github.com/i2585/PaaS-TA/blob/main/devstack%20%EC%84%A4%EC%B9%98/local.conf%20%ED%8C%8C%EC%9D%BC.txt)
+     - [vi local.conf](https://github.com/i2585/PaaS-TA/blob/main/devstack%20%EC%84%A4%EC%B9%98/local.conf%20%ED%8C%8C%EC%9D%BC.txt)
      - ./stack.sh
   
   - 설치 중 오류발생 시 다음 명령어 입력 후 ./stack.sh
