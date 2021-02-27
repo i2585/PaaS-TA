@@ -36,7 +36,7 @@
 ----------------------------------stack 유저----------------------------------
   - devstack 
      - git clone https://github.com/openstack-dev/devstack.git
-     - vi local.conf
+     - vi local.conf (https://github.com/i2585/PaaS-TA/blob/main/devstack%20%EC%84%A4%EC%B9%98/local.conf%20%ED%8C%8C%EC%9D%BC.txt)
      - ./stack.sh
   
   - 설치 중 오류발생 시 다음 명령어 입력 후 ./stack.sh
