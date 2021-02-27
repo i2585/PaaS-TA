@@ -1,0 +1,155 @@
+Deploying:
+  Creating instance 'bosh/0':
+    Creating VM:
+      Creating vm with stemcell cid 'sc-136b8e86-0318-4f93-672f-6174d84f0f08':
+        Executing external CPI command: '/home/pjh9257/.bosh/installations/5edc3e24-398e-4054-69f9-a97fbd86deb9/jobs/virtualbox_cpi/bin/cpi':
+          Running command: '/home/pjh9257/.bosh/installations/5edc3e24-398e-4054-69f9-a97fbd86deb9/jobs/virtualbox_cpi/bin/cpi', stdout: '', stderr: '[File System] 2021/01/12 14:30:41 DEBUG - Reading file /home/pjh9257/.bosh/installations/5edc3e24-398e-4054-69f9-a97fbd86deb9/jobs/virtualbox_cpi/config/cpi.json
+[File System] 2021/01/12 14:30:41 DEBUG - Read content
+********************
+{"Host":"","Username":"ubuntu","PrivateKey":"","BinPath":"VBoxManage","StoreDir":"~/.bosh_virtualbox_cpi","StorageController":"ide","AutoEnableNetworks":true,"Agent":{"NTP":["time1.google.com","time2.google.com","time3.google.com","time4.google.com"],"blobstore":{"provider":"local","options":{"blobstore_path":"/var/vcap/micro_bosh/data/cache"}},"mbus":"https://mbus:x65up6bwx74fa162bwyn@0.0.0.0:6868"}}
+
+********************
+[rpc.JSONDispatcher] 2021/01/12 14:30:41 DEBUG - Request bytes
+********************
+{"method":"create_vm","arguments":["693e90b9-5012-45bd-7085-e38c7a057546","sc-136b8e86-0318-4f93-672f-6174d84f0f08",{"cpus":4,"ephemeral_disk":16384,"memory":6144},{"default":{"cloud_properties":{},"default":["dns","gateway"],"dns":["8.8.8.8"],"gateway":"172.20.144.1","ip":"172.20.153.182","netmask":"255.255.240.0","type":"manual"},"outbound":{"cloud_properties":{"name":"NatNetwork","type":"natnetwork"},"type":"dynamic"}},[],{"bosh":{"mbus":{"cert":{"ca":"-----BEGIN CERTIFICATE-----\nMIIEVDCCArygAwIBAgIRAON+37v5MB4imM8z6Klg2FkwDQYJKoZIhvcNAQELBQAw\nMzEMMAoGA1UEBhMDVVNBMRYwFAYDVQQKEw1DbG91ZCBGb3VuZHJ5MQswCQYDVQQD\nEwJjYTAeFw0yMTAxMTEwNjE4MTlaFw0yMjAxMTEwNjE4MTlaMDMxDDAKBgNVBAYT\nA1VTQTEWMBQGA1UEChMNQ2xvdWQgRm91bmRyeTELMAkGA1UEAxMCY2EwggGiMA0G\nCSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQDWnC2pSAO8/C1LCLiiyHS4RHZTMaj/\nB1d4XAY0e3P2erQ12Lv2QEzdxa8itWK0veBMs+DWbvfhbM8dMhHb06Ij1Qe+z4FP\n2LFGQ8kc3nmaRw8iZhWt9j46qcSg4zm7/SH9A5QkzZJlIr3JgxiYtPdKsnmbvh4A\ns+kCY0y1WyKjnefNz47EKZCYjezCHtL9KmTHRA5Ck3Qpka9uQ6nMVyA/SvOH5xuq\nIrAHEHW/CdgjIJpKVutyq0UDG51rTo/e4Y5fEYMIN7Db8GNcSievX+5Rc80rIvZb\nboJd3QQOpF0sRDgGbi3KYijB4b8HsRcy+5lXnqoTQjG+IGA1JJBIoywt7AO5f33u\nVAvUcLaQiWWXV74ML26bX/PNAdFIkPtwevE7x37Y/IGClrhmAmCa5yuGh3KeMMV4\naP+li+9M/nQAj7LOdv7hYEuIEsuWOq1bLtpccN+2SHIOBcB7V2Qi/L0c4Zzi4bOe\nnsPep+fRQCsMITdszDg1TtL1UPIsCcAa3K0CAwEAAaNjMGEwDgYDVR0PAQH/BAQD\nAgEGMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFMdDR3SxrqLKtyDHypXa83j7\nV35PMB8GA1UdIwQYMBaAFMdDR3SxrqLKtyDHypXa83j7V35PMA0GCSqGSIb3DQEB\nCwUAA4IBgQAuQa93SU7rg6k1o8YdKVPirSw3PNOkmNeipdECxbGdGxdChj5IvMj5\nAgsV9NA4+slQ/RvR9W2uUG0uP/vj/DorabLpl2J2ddszLE1moPxFyoOUoChYc6Rx\nXkCYx0qOkCWg7fWLte8DTXYH7N3E1W/NuwNipWd6rafPKQVMcQ0mWCl0Qwgfn9wN\nmhLGnq85TPFP/ooCUEy4XWzzzZwVIju9y61ISoq+yQKYGt39uDtR3uCBe8nQKaro\nXVmYxLOT9AtemxBZt1eZVulMr8l54/Wt+SB/pV2HqbT1x3E0uxy90ZxtFIUVoWWm\nWvM6zD/xo3w5zlfwAUYwo0Gqh3GBfmGGAMexi/626Oqk3xD303aZXzquAnZjftQc\nwHyhNDzk8FDHAfIFtOBv4w4Z+PE0ybRGv2pc5KUcBK95d05RpUcVj9MgryFYXWSr\nzO5K3P34UYOVYPJjuDHgztEAxAAsZzafoLY9mZlKr2rx6MWoKi13HpjH4CxxuCBP\nzEZFsyXKJM0=\n-----END CERTIFICATE-----\n","certificate":"-----BEGIN CERTIFICATE-----\nMIIEhDCCAuygAwIBAgIRAP+SZyXO4cBuFlZNCAbMVTIwDQYJKoZIhvcNAQELBQAw\nMzEMMAoGA1UEBhMDVVNBMRYwFAYDVQQKEw1DbG91ZCBGb3VuZHJ5MQswCQYDVQQD\nEwJjYTAeFw0yMTAxMTEwNjE4MjBaFw0yMjAxMTEwNjE4MjBaMD4xDDAKBgNVBAYT\nA1VTQTEWMBQGA1UEChMNQ2xvdWQgRm91bmRyeTEWMBQGA1UEAxMNMTcyLjIwLjE0\nNy41MTCCAaIwDQYJKoZIhvcNAQEBBQADggGPADCCAYoCggGBAOqYjVyyIhQ+Huik\niz02dLxcEkUn8SjXr8RYwc+3bSzKU0uFG8wEbTPscZzrBVSiFC4Q8SuO6JVy5aQT\nXYIC8T0+155EkbEmok+G0fH8scBj1HxiaK7Gh0LRf17lxzh0CDrQhSB4aSeRMhke\ngL+WaGHwyba4JzoS0C9sQsiu+oWhu2TcFS72gCRLjHHLjmnNVaF1V/+l22CAsZ5G\n6HuEGJsNqZYafE4gjG34w69KcGfTpc7sM4OvJpxDoKUUGX2Ux9fgrCnxMH8X6z7F\njU1Tsv7ziJBy+8dy3TJ4z2nz2XrtjDpmHr6m+DQockFxo6bhKwV9bi5/VzWQdMUM\nG2oEvaV+1psyNKAThKZtJf/1C8O2XkzaNxOzTHmN4oF5gY2+/Bm9kvaas5qKUvy/\n+aNqx9C1f82iSAp1DoFuR7n5Hd7dntUlQ/VuZNVtFOe1asSAL7kd3mF3KY3+5Zpq\nz6FD6IRvGuV2JYS4VwUaBqcbNtazIzX2KDSmiwnG5rWjXqh9kwIDAQABo4GHMIGE\nMA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggrBgEFBQcDATAMBgNVHRMBAf8E\nAjAAMB0GA1UdDgQWBBSeIIN3CtMAWLedxchz9nLzlpZcRDAfBgNVHSMEGDAWgBTH\nQ0d0sa6iyrcgx8qV2vN4+1d+TzAPBgNVHREECDAGhwSsFJMzMA0GCSqGSIb3DQEB\nCwUAA4IBgQCgxACdyCfmQF9SwLs5tBeqigcBCbhWQtRmkrG0cvOBwVYm9cIX+1vJ\nXUlr//m+Da4C2gGoL+SsZBcIWI57E39GYcTEt8p6l4t7EaYnpJyr26jxUwY5WsxR\nz4egGoZcXUFPVczM6uahiMwqDjcGJsQpK6EkJ5obXGx1VspU1KhMXd0R5faipVH6\nrSUvs8vF+chJKgKMMKbxurGoUUryk9yJNnEdGO/WVxUcXGGEunPfNuTPsB8BMUmQ\nQ1SEtYRqfg1p4mWHsNhLbU56K6QaKnO4IFF+K4bFAVVLBoImZ0RNRM3zOAMrIUQ8\n4hRWNC3MMa4dg8AE9En894XV5jvT5hXK56uS2q0lN9Y6d3MWi8ziBFM8w2ow0CGI\ngcig7QvfCmVVvssYF9OJx3N1G1bu38BbQqBMKi43GeS8SRYUHUdL5V7IjTcPgNz7\n+Z4QKbyzaIG+nmKWOjz7+vx2AHS/xWsP0o5cEv1IZ7deMjThqkV7bwRo4aF9WE5u\n7SCq8v/56+Q=\n-----END CERTIFICATE-----\n","private_key":"-----BEGIN RSA PRIVATE KEY-----\n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\n-----END RSA PRIVATE KEY-----\n"}},"password":"*"}}],"context":{"director_uuid":"6910f56a-0e80-4d17-5fc5-0b214a88a84e","vm":{"stemcell":{"api_version":2}}},"api_version":2}
+********************
+[rpc.JSONDispatcher] 2021/01/12 14:30:41 DEBUG - Deserialized request
+********************
+{create_vm [693e90b9-5012-45bd-7085-e38c7a057546 sc-136b8e86-0318-4f93-672f-6174d84f0f08 map[cpus:%!!(MISSING)s(float64=4) ephemeral_disk:%!!(MISSING)s(float64=16384) memory:%!!(MISSING)s(float64=6144)] map[default:map[gateway:172.20.144.1 ip:172.20.153.182 netmask:255.255.240.0 type:manual cloud_properties:map[] default:[dns gateway] dns:[8.8.8.8]] outbound:map[cloud_properties:map[type:natnetwork name:NatNetwork] type:dynamic]] [] map[bosh:map[mbus:map[cert:map[private_key:-----BEGIN RSA PRIVATE KEY-----
+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
+-----END RSA PRIVATE KEY-----
+ ca:-----BEGIN CERTIFICATE-----
+MIIEVDCCArygAwIBAgIRAON+37v5MB4imM8z6Klg2FkwDQYJKoZIhvcNAQELBQAw
+MzEMMAoGA1UEBhMDVVNBMRYwFAYDVQQKEw1DbG91ZCBGb3VuZHJ5MQswCQYDVQQD
+EwJjYTAeFw0yMTAxMTEwNjE4MTlaFw0yMjAxMTEwNjE4MTlaMDMxDDAKBgNVBAYT
+A1VTQTEWMBQGA1UEChMNQ2xvdWQgRm91bmRyeTELMAkGA1UEAxMCY2EwggGiMA0G
+CSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQDWnC2pSAO8/C1LCLiiyHS4RHZTMaj/
+B1d4XAY0e3P2erQ12Lv2QEzdxa8itWK0veBMs+DWbvfhbM8dMhHb06Ij1Qe+z4FP
+2LFGQ8kc3nmaRw8iZhWt9j46qcSg4zm7/SH9A5QkzZJlIr3JgxiYtPdKsnmbvh4A
+s+kCY0y1WyKjnefNz47EKZCYjezCHtL9KmTHRA5Ck3Qpka9uQ6nMVyA/SvOH5xuq
+IrAHEHW/CdgjIJpKVutyq0UDG51rTo/e4Y5fEYMIN7Db8GNcSievX+5Rc80rIvZb
+boJd3QQOpF0sRDgGbi3KYijB4b8HsRcy+5lXnqoTQjG+IGA1JJBIoywt7AO5f33u
+VAvUcLaQiWWXV74ML26bX/PNAdFIkPtwevE7x37Y/IGClrhmAmCa5yuGh3KeMMV4
+aP+li+9M/nQAj7LOdv7hYEuIEsuWOq1bLtpccN+2SHIOBcB7V2Qi/L0c4Zzi4bOe
+nsPep+fRQCsMITdszDg1TtL1UPIsCcAa3K0CAwEAAaNjMGEwDgYDVR0PAQH/BAQD
+AgEGMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFMdDR3SxrqLKtyDHypXa83j7
+V35PMB8GA1UdIwQYMBaAFMdDR3SxrqLKtyDHypXa83j7V35PMA0GCSqGSIb3DQEB
+CwUAA4IBgQAuQa93SU7rg6k1o8YdKVPirSw3PNOkmNeipdECxbGdGxdChj5IvMj5
+AgsV9NA4+slQ/RvR9W2uUG0uP/vj/DorabLpl2J2ddszLE1moPxFyoOUoChYc6Rx
+XkCYx0qOkCWg7fWLte8DTXYH7N3E1W/NuwNipWd6rafPKQVMcQ0mWCl0Qwgfn9wN
+mhLGnq85TPFP/ooCUEy4XWzzzZwVIju9y61ISoq+yQKYGt39uDtR3uCBe8nQKaro
+XVmYxLOT9AtemxBZt1eZVulMr8l54/Wt+SB/pV2HqbT1x3E0uxy90ZxtFIUVoWWm
+WvM6zD/xo3w5zlfwAUYwo0Gqh3GBfmGGAMexi/626Oqk3xD303aZXzquAnZjftQc
+wHyhNDzk8FDHAfIFtOBv4w4Z+PE0ybRGv2pc5KUcBK95d05RpUcVj9MgryFYXWSr
+zO5K3P34UYOVYPJjuDHgztEAxAAsZzafoLY9mZlKr2rx6MWoKi13HpjH4CxxuCBP
+zEZFsyXKJM0=
+-----END CERTIFICATE-----
+ certificate:-----BEGIN CERTIFICATE-----
+MIIEhDCCAuygAwIBAgIRAP+SZyXO4cBuFlZNCAbMVTIwDQYJKoZIhvcNAQELBQAw
+MzEMMAoGA1UEBhMDVVNBMRYwFAYDVQQKEw1DbG91ZCBGb3VuZHJ5MQswCQYDVQQD
+EwJjYTAeFw0yMTAxMTEwNjE4MjBaFw0yMjAxMTEwNjE4MjBaMD4xDDAKBgNVBAYT
+A1VTQTEWMBQGA1UEChMNQ2xvdWQgRm91bmRyeTEWMBQGA1UEAxMNMTcyLjIwLjE0
+Ny41MTCCAaIwDQYJKoZIhvcNAQEBBQADggGPADCCAYoCggGBAOqYjVyyIhQ+Huik
+iz02dLxcEkUn8SjXr8RYwc+3bSzKU0uFG8wEbTPscZzrBVSiFC4Q8SuO6JVy5aQT
+XYIC8T0+155EkbEmok+G0fH8scBj1HxiaK7Gh0LRf17lxzh0CDrQhSB4aSeRMhke
+gL+WaGHwyba4JzoS0C9sQsiu+oWhu2TcFS72gCRLjHHLjmnNVaF1V/+l22CAsZ5G
+6HuEGJsNqZYafE4gjG34w69KcGfTpc7sM4OvJpxDoKUUGX2Ux9fgrCnxMH8X6z7F
+jU1Tsv7ziJBy+8dy3TJ4z2nz2XrtjDpmHr6m+DQockFxo6bhKwV9bi5/VzWQdMUM
+G2oEvaV+1psyNKAThKZtJf/1C8O2XkzaNxOzTHmN4oF5gY2+/Bm9kvaas5qKUvy/
++aNqx9C1f82iSAp1DoFuR7n5Hd7dntUlQ/VuZNVtFOe1asSAL7kd3mF3KY3+5Zpq
+z6FD6IRvGuV2JYS4VwUaBqcbNtazIzX2KDSmiwnG5rWjXqh9kwIDAQABo4GHMIGE
+MA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggrBgEFBQcDATAMBgNVHRMBAf8E
+AjAAMB0GA1UdDgQWBBSeIIN3CtMAWLedxchz9nLzlpZcRDAfBgNVHSMEGDAWgBTH
+Q0d0sa6iyrcgx8qV2vN4+1d+TzAPBgNVHREECDAGhwSsFJMzMA0GCSqGSIb3DQEB
+CwUAA4IBgQCgxACdyCfmQF9SwLs5tBeqigcBCbhWQtRmkrG0cvOBwVYm9cIX+1vJ
+XUlr//m+Da4C2gGoL+SsZBcIWI57E39GYcTEt8p6l4t7EaYnpJyr26jxUwY5WsxR
+z4egGoZcXUFPVczM6uahiMwqDjcGJsQpK6EkJ5obXGx1VspU1KhMXd0R5faipVH6
+rSUvs8vF+chJKgKMMKbxurGoUUryk9yJNnEdGO/WVxUcXGGEunPfNuTPsB8BMUmQ
+Q1SEtYRqfg1p4mWHsNhLbU56K6QaKnO4IFF+K4bFAVVLBoImZ0RNRM3zOAMrIUQ8
+4hRWNC3MMa4dg8AE9En894XV5jvT5hXK56uS2q0lN9Y6d3MWi8ziBFM8w2ow0CGI
+gcig7QvfCmVVvssYF9OJx3N1G1bu38BbQqBMKi43GeS8SRYUHUdL5V7IjTcPgNz7
++Z4QKbyzaIG+nmKWOjz7+vx2AHS/xWsP0o5cEv1IZ7deMjThqkV7bwRo4aF9WE5u
+7SCq8v/56+Q=
+-----END CERTIFICATE-----
+]] password:*]]] {{"director_uuid":"6910f56a-0e80-4d17-5fc5-0b214a88a84e","vm":{"stemcell":{"api_version":2}}}} %!!(MISSING)s(int=2)}
+********************
+[driver.LocalRunner] 2021/01/12 14:30:41 DEBUG - Execute 'VBoxManage list' 'hostonlyifs'
+[Cmd Runner] 2021/01/12 14:30:41 DEBUG - Running command 'VBoxManage list hostonlyifs'
+[Cmd Runner] 2021/01/12 14:30:41 DEBUG - Stdout: WARNING: The vboxdrv kernel module is not loaded. Either there is no module
+         available for the current kernel (4.19.128-microsoft-standard) or it failed to
+         load. Please recompile the kernel module and install it by
+
+           sudo /sbin/vboxconfig
+
+         You will not be able to start VMs until this problem is fixed.
+[Cmd Runner] 2021/01/12 14:30:41 DEBUG - Stderr:
+[Cmd Runner] 2021/01/12 14:30:41 DEBUG - Successful: true (0)
+panic: Internal inconsistency: Expected len(^([a-zA-Z0-9]+):\s*(.+)?$ matches) == 3: line '         available for the current kernel (4.19.128-microsoft-standard) or it failed to'
+
+goroutine 1 [running]:
+github.com/cppforlife/bosh-virtualbox-cpi/vm/network.Networks.HostOnlys(0x71a7e0, 0xc4200baa50, 0x71cae0, 0xc4200b6f80, 0xc4200b37f8, 0x0, 0x199, 0x411559, 0x0)
+        /home/pjh9257/.bosh/installations/5edc3e24-398e-4054-69f9-a97fbd86deb9/tmp/bosh-release-pkg465445304/src/github.com/cppforlife/bosh-virtualbox-cpi/vm/network/networks.go:109 +0x7b7
+github.com/cppforlife/bosh-virtualbox-cpi/vm.hostOnlysAdapter.List(0x71a7e0, 0xc4200baa50, 0x71cae0, 0xc4200b6f80, 0x8, 0xc4200bf4b0, 0x0, 0x87a3c0, 0xf)
+        /home/pjh9257/.bosh/installations/5edc3e24-398e-4054-69f9-a97fbd86deb9/tmp/bosh-release-pkg465445304/src/github.com/cppforlife/bosh-virtualbox-cpi/vm/host.go:182 +0x4d
+github.com/cppforlife/bosh-virtualbox-cpi/vm.(*hostNetwork).Enable(0xc42012ffa0, 0xc42012fe40, 0x71a820)
+        /home/pjh9257/.bosh/installations/5edc3e24-398e-4054-69f9-a97fbd86deb9/tmp/bosh-release-pkg465445304/src/github.com/cppforlife/bosh-virtualbox-cpi/vm/host.go:84 +0x49
+github.com/cppforlife/bosh-virtualbox-cpi/vm.Host.EnableNetworks(0x71a7e0, 0xc4200baa50, 0x71cae0, 0xc4200b6f80, 0xc4200ade00, 0x6e502a, 0x4)
+        /home/pjh9257/.bosh/installations/5edc3e24-398e-4054-69f9-a97fbd86deb9/tmp/bosh-release-pkg465445304/src/github.com/cppforlife/bosh-virtualbox-cpi/vm/host.go:43 +0x4c2
+github.com/cppforlife/bosh-virtualbox-cpi/vm.Factory.Create(0xc4200ce880, 0x1a, 0xc4200bee7a, 0x3, 0x1, 0x718920, 0x896998, 0x71a7e0, 0xc4200baa50, 0x71ace0, ...)
+        /home/pjh9257/.bosh/installations/5edc3e24-398e-4054-69f9-a97fbd86deb9/tmp/bosh-release-pkg465445304/src/github.com/cppforlife/bosh-virtualbox-cpi/vm/factory.go:86 +0xf19
+github.com/cppforlife/bosh-virtualbox-cpi/cpi.VMs.CreateVMV2(0x718a80, 0xc4200e55e0, 0x718ac0, 0xc4200cb320, 0x718ae0, 0xc4200cb440, 0xc4200e6810, 0x24, 0xc4200e6840, 0x27, ...)
+        /home/pjh9257/.bosh/installations/5edc3e24-398e-4054-69f9-a97fbd86deb9/tmp/bosh-release-pkg465445304/src/github.com/cppforlife/bosh-virtualbox-cpi/cpi/vms.go:40 +0xde
+github.com/cppforlife/bosh-cpi-go/apiv1.ActionFactory.Create.func4(0xc4200e6810, 0x24, 0xc4200e6840, 0x27, 0xc4200e6870, 0x2f, 0x30, 0xc4200ada10, 0x896998, 0x0, ...)
+        /home/pjh9257/.bosh/installations/5edc3e24-398e-4054-69f9-a97fbd86deb9/tmp/bosh-release-pkg465445304/src/github.com/cppforlife/bosh-cpi-go/apiv1/action_factory.go:56 +0x137
+reflect.Value.call(0x6a3ae0, 0xc4200b72c0, 0x13, 0x6e4f12, 0x4, 0xc4201280c0, 0x6, 0x8, 0x69b080, 0x690d00, ...)
+        /home/pjh9257/.bosh/installations/5edc3e24-398e-4054-69f9-a97fbd86deb9/packages/golang-1.10-linux/src/reflect/value.go:447 +0x969
+reflect.Value.Call(0x6a3ae0, 0xc4200b72c0, 0x13, 0xc4201280c0, 0x6, 0x8, 0x6, 0x8, 0x0)
+        /home/pjh9257/.bosh/installations/5edc3e24-398e-4054-69f9-a97fbd86deb9/packages/golang-1.10-linux/src/reflect/value.go:308 +0xa4
+github.com/cppforlife/bosh-cpi-go/rpc.JSONCaller.Call(0x6a3ae0, 0xc4200b72c0, 0xc4200f4720, 0x6, 0x6, 0x6a3ae0, 0xc4200b72c0, 0x0, 0x0)
+        /home/pjh9257/.bosh/installations/5edc3e24-398e-4054-69f9-a97fbd86deb9/tmp/bosh-release-pkg465445304/src/github.com/cppforlife/bosh-cpi-go/rpc/json_caller.go:44 +0x2ae
+github.com/cppforlife/bosh-cpi-go/rpc.JSONDispatcher.Dispatch(0x718940, 0xc4200aa890, 0x7189c0, 0x896998, 0x6e8662, 0x12, 0x71cae0, 0xc4200b6f80, 0xc420148000, 0x18e7, ...)
+        /home/pjh9257/.bosh/installations/5edc3e24-398e-4054-69f9-a97fbd86deb9/tmp/bosh-release-pkg465445304/src/github.com/cppforlife/bosh-cpi-go/rpc/json_dispatcher.go:74 +0x3d8
+github.com/cppforlife/bosh-cpi-go/rpc.CLI.ServeOnce(0x718540, 0xc4200c2000, 0x718560, 0xc4200c2008, 0x7189e0, 0xc4200c4700, 0x6e4d84, 0x3, 0x71cae0, 0xc4200b6f80, ...)
+        /home/pjh9257/.bosh/installations/5edc3e24-398e-4054-69f9-a97fbd86deb9/tmp/bosh-release-pkg465445304/src/github.com/cppforlife/bosh-cpi-go/rpc/cli.go:38 +0x23c
+main.main()
+        /home/pjh9257/.bosh/installations/5edc3e24-398e-4054-69f9-a97fbd86deb9/tmp/bosh-release-pkg465445304/src/github.com/cppforlife/bosh-virtualbox-cpi/main/main.go:43 +0x5e3
+':
+            exit status 2
+
+Exit code 1

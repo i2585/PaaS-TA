@@ -1,0 +1,75 @@
+Task 159 | 09:27:06 | Preparing deployment: Rendering templates (00:00:02)
+                    L Error: Unable to render instance groups for deployment. Errors are:
+  - Unable to render jobs for instance group 'haproxy'. Errors are:
+    - Unable to interpolate link 'paas-ta-portal-log-api-link' properties; provided by 'portal-api' deployment. Errors are:
+      - Failed to find variable '/micro-bosh/portal-api/system_domain' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/paasta_admin_username' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/paasta_admin_password' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/uaa_client_admin_id' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/uaa_client_admin_secret' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+  - Unable to render jobs for instance group 'paas-ta-portal-api'. Errors are:
+    - Unable to render templates for job 'paas-ta-portal-api'. Errors are:
+      - Failed to find variable '/micro-bosh/portal-api/system_domain' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/paasta_admin_username' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/paasta_admin_password' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/uaa_client_admin_secret' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/abacus_url' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/monitoring_api_url' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+  - Unable to render jobs for instance group 'paas-ta-portal-common-api'. Errors are:
+    - Unable to render templates for job 'paas-ta-portal-common-api'. Errors are:
+      - Failed to find variable '/micro-bosh/portal-api/paasta_database_ips' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/paasta_database_port' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/paasta_cc_db_id' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/paasta_cc_db_password' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/paasta_uaa_db_id' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/paasta_uaa_db_password' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/portal_web_user_url' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+  - Unable to render jobs for instance group 'paas-ta-portal-log-api'. Errors are:
+    - Unable to render templates for job 'paas-ta-portal-log-api'. Errors are:
+      - Failed to find variable '/micro-bosh/portal-api/system_domain' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/paasta_admin_username' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/paasta_admin_password' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/uaa_client_admin_id' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/uaa_client_admin_secret' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+Task 159 | 09:27:08 | Error: Unable to render instance groups for deployment. Errors are:
+  - Unable to render jobs for instance group 'haproxy'. Errors are:
+    - Unable to interpolate link 'paas-ta-portal-log-api-link' properties; provided by 'portal-api' deployment. Errors are:
+      - Failed to find variable '/micro-bosh/portal-api/system_domain' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/paasta_admin_username' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/paasta_admin_password' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/uaa_client_admin_id' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/uaa_client_admin_secret' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+  - Unable to render jobs for instance group 'paas-ta-portal-api'. Errors are:
+    - Unable to render templates for job 'paas-ta-portal-api'. Errors are:
+      - Failed to find variable '/micro-bosh/portal-api/system_domain' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/paasta_admin_username' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/paasta_admin_password' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/uaa_client_admin_secret' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/abacus_url' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/monitoring_api_url' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+  - Unable to render jobs for instance group 'paas-ta-portal-common-api'. Errors are:
+    - Unable to render templates for job 'paas-ta-portal-common-api'. Errors are:
+      - Failed to find variable '/micro-bosh/portal-api/paasta_database_ips' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/paasta_database_port' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/paasta_cc_db_id' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/paasta_cc_db_password' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/paasta_uaa_db_id' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/paasta_uaa_db_password' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/portal_web_user_url' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+  - Unable to render jobs for instance group 'paas-ta-portal-log-api'. Errors are:
+    - Unable to render templates for job 'paas-ta-portal-log-api'. Errors are:
+      - Failed to find variable '/micro-bosh/portal-api/system_domain' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/paasta_admin_username' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/paasta_admin_password' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/uaa_client_admin_id' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+      - Failed to find variable '/micro-bosh/portal-api/uaa_client_admin_secret' from config server: HTTP Code '404', Error: 'The request could not be completed because the credential does not exist or you do not have sufficient authorization.'
+
+Task 159 Started  Thu Feb 18 09:27:04 UTC 2021
+Task 159 Finished Thu Feb 18 09:27:08 UTC 2021
+Task 159 Duration 00:00:04
+Task 159 error
+
+Updating deployment:
+  Expected task '159' to succeed but state is 'error'
+
+Exit code 1

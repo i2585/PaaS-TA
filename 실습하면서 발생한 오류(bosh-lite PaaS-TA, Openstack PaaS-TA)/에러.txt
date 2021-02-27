@@ -1,0 +1,147 @@
+Task 1393 | 08:39:44 | Compiling packages: postgres-11.4/6e7f866c5067718348d20c81d7c886e18f4aae658ecd8bad6ee25ce973a44569 (00:00:02)
+                    L Error: CPI error 'Bosh::Clouds::CloudError' with message 'OpenStack API BadRequest Expected([201]) <=> Actual(400 Bad Request)
+excon.error.response
+  :body          => "{\"NeutronError\": {\"type\": \"InvalidIpForNetwork\", \"message\": \"IP address 10.0.21.32 is not a valid IP for any of the subnets on the specified network.\", \"detail\": \"\"}}"
+  :cookies       => [
+  ]
+  :headers       => {
+    "Content-Length"         => "166"
+    "Content-Type"           => "application/json"
+    "Date"                   => "Mon, 15 Feb 2021 08:39:44 GMT"
+    "X-Openstack-Request-Id" => "req-02b2668d-86ab-4a6c-be5c-7ecb145e46ba"
+  }
+  :host          => "192.168.254.129"
+  :local_address => "10.0.1.6"
+  :local_port    => 58242
+  :path          => "/v2.0/ports"
+  :port          => 9696
+  :reason_phrase => "Bad Request"
+  :remote_ip     => "192.168.254.129"
+  :status        => 400
+  :status_line   => "HTTP/1.1 400 Bad Request\r\n"
+ (IP address 10.0.21.32 is not a valid IP for any of the subnets on the specified network.).
+Check task debug log for details.' in 'create_vm' CPI method (CPI request ID: 'cpi-798646')
+Task 1393 | 08:39:44 | Compiling packages: postgres-common/9e812f515167406f22e2f983a6c325b0a54e1bd6128aa44e1b8f8bc44034d01f (00:00:02)
+                    L Error: CPI error 'Bosh::Clouds::CloudError' with message 'OpenStack API BadRequest Expected([201]) <=> Actual(400 Bad Request)
+excon.error.response
+  :body          => "{\"NeutronError\": {\"type\": \"InvalidIpForNetwork\", \"message\": \"IP address 10.0.21.34 is not a valid IP for any of the subnets on the specified network.\", \"detail\": \"\"}}"
+  :cookies       => [
+  ]
+  :headers       => {
+    "Content-Length"         => "166"
+    "Content-Type"           => "application/json"
+    "Date"                   => "Mon, 15 Feb 2021 08:39:44 GMT"
+    "X-Openstack-Request-Id" => "req-05c11c0e-b2cf-49b5-b438-31d3223f1d11"
+  }
+  :host          => "192.168.254.129"
+  :local_address => "10.0.1.6"
+  :local_port    => 58262
+  :path          => "/v2.0/ports"
+  :port          => 9696
+  :reason_phrase => "Bad Request"
+  :remote_ip     => "192.168.254.129"
+  :status        => 400
+  :status_line   => "HTTP/1.1 400 Bad Request\r\n"
+ (IP address 10.0.21.34 is not a valid IP for any of the subnets on the specified network.).
+Check task debug log for details.' in 'create_vm' CPI method (CPI request ID: 'cpi-769595')
+Task 1393 | 08:39:44 | Compiling packages: golang-1-linux/a58647561918778c52fb932074e6099497a9063bce3a1531e5c60ba643e1f4df (00:00:02)
+                    L Error: CPI error 'Bosh::Clouds::CloudError' with message 'OpenStack API BadRequest Expected([201]) <=> Actual(400 Bad Request)
+excon.error.response
+  :body          => "{\"NeutronError\": {\"type\": \"InvalidIpForNetwork\", \"message\": \"IP address 10.0.21.35 is not a valid IP for any of the subnets on the specified network.\", \"detail\": \"\"}}"
+  :cookies       => [
+  ]
+  :headers       => {
+    "Content-Length"         => "166"
+    "Content-Type"           => "application/json"
+    "Date"                   => "Mon, 15 Feb 2021 08:39:44 GMT"
+    "X-Openstack-Request-Id" => "req-287d0997-13f3-480a-8be4-a33c2b7c07b4"
+  }
+  :host          => "192.168.254.129"
+  :local_address => "10.0.1.6"
+  :local_port    => 58252
+  :path          => "/v2.0/ports"
+  :port          => 9696
+  :reason_phrase => "Bad Request"
+  :remote_ip     => "192.168.254.129"
+  :status        => 400
+  :status_line   => "HTTP/1.1 400 Bad Request\r\n"
+ (IP address 10.0.21.35 is not a valid IP for any of the subnets on the specified network.).
+Check task debug log for details.' in 'create_vm' CPI method (CPI request ID: 'cpi-775501')
+Task 1393 | 08:39:44 | Compiling packages: postgres-9.6.10/04ecac16e7e53e17d1a1799c0fe874f262f1960ba37514da1b3a30d1c58c13c0 (00:00:02)
+                    L Error: CPI error 'Bosh::Clouds::CloudError' with message 'OpenStack API BadRequest Expected([201]) <=> Actual(400 Bad Request)
+excon.error.response
+  :body          => "{\"NeutronError\": {\"type\": \"InvalidIpForNetwork\", \"message\": \"IP address 10.0.21.31 is not a valid IP for any of the subnets on the specified network.\", \"detail\": \"\"}}"
+  :cookies       => [
+  ]
+  :headers       => {
+    "Content-Length"         => "166"
+    "Content-Type"           => "application/json"
+    "Date"                   => "Mon, 15 Feb 2021 08:39:44 GMT"
+    "X-Openstack-Request-Id" => "req-becd211c-aafb-4d8f-a908-ee32073c3d7d"
+  }
+  :host          => "192.168.254.129"
+  :local_address => "10.0.1.6"
+  :local_port    => 58246
+  :path          => "/v2.0/ports"
+  :port          => 9696
+  :reason_phrase => "Bad Request"
+  :remote_ip     => "192.168.254.129"
+  :status        => 400
+  :status_line   => "HTTP/1.1 400 Bad Request\r\n"
+ (IP address 10.0.21.31 is not a valid IP for any of the subnets on the specified network.).
+Check task debug log for details.' in 'create_vm' CPI method (CPI request ID: 'cpi-904011')
+Task 1393 | 08:39:44 | Compiling packages: ttar/8cdfde2f1ddc5f1c22b003002a473fbb1455e02b14167401d7fdd5856fec77b5 (00:00:02)
+                    L Error: CPI error 'Bosh::Clouds::CloudError' with message 'OpenStack API BadRequest Expected([201]) <=> Actual(400 Bad Request)
+excon.error.response
+  :body          => "{\"NeutronError\": {\"type\": \"InvalidIpForNetwork\", \"message\": \"IP address 10.0.21.33 is not a valid IP for any of the subnets on the specified network.\", \"detail\": \"\"}}"
+  :cookies       => [
+  ]
+  :headers       => {
+    "Content-Length"         => "166"
+    "Content-Type"           => "application/json"
+    "Date"                   => "Mon, 15 Feb 2021 08:39:44 GMT"
+    "X-Openstack-Request-Id" => "req-ea888493-4484-4bec-858d-b48cd92fbdc1"
+  }
+  :host          => "192.168.254.129"
+  :local_address => "10.0.1.6"
+  :local_port    => 58248
+  :path          => "/v2.0/ports"
+  :port          => 9696
+  :reason_phrase => "Bad Request"
+  :remote_ip     => "192.168.254.129"
+  :status        => 400
+  :status_line   => "HTTP/1.1 400 Bad Request\r\n"
+ (IP address 10.0.21.33 is not a valid IP for any of the subnets on the specified network.).
+Check task debug log for details.' in 'create_vm' CPI method (CPI request ID: 'cpi-787106')
+Task 1393 | 08:39:44 | Error: CPI error 'Bosh::Clouds::CloudError' with message 'OpenStack API BadRequest Expected([201]) <=> Actual(400 Bad Request)
+excon.error.response
+  :body          => "{\"NeutronError\": {\"type\": \"InvalidIpForNetwork\", \"message\": \"IP address 10.0.21.32 is not a valid IP for any of the subnets on the specified network.\", \"detail\": \"\"}}"
+  :cookies       => [
+  ]
+  :headers       => {
+    "Content-Length"         => "166"
+    "Content-Type"           => "application/json"
+    "Date"                   => "Mon, 15 Feb 2021 08:39:44 GMT"
+    "X-Openstack-Request-Id" => "req-02b2668d-86ab-4a6c-be5c-7ecb145e46ba"
+  }
+  :host          => "192.168.254.129"
+  :local_address => "10.0.1.6"
+  :local_port    => 58242
+  :path          => "/v2.0/ports"
+  :port          => 9696
+  :reason_phrase => "Bad Request"
+  :remote_ip     => "192.168.254.129"
+  :status        => 400
+  :status_line   => "HTTP/1.1 400 Bad Request\r\n"
+ (IP address 10.0.21.32 is not a valid IP for any of the subnets on the specified network.).
+Check task debug log for details.' in 'create_vm' CPI method (CPI request ID: 'cpi-798646')
+
+Task 1393 Started  Mon Feb 15 08:39:09 UTC 2021
+Task 1393 Finished Mon Feb 15 08:39:44 UTC 2021
+Task 1393 Duration 00:00:35
+Task 1393 error
+
+Updating deployment:
+  Expected task '1393' to succeed but state is 'error'
+
+Exit code 1

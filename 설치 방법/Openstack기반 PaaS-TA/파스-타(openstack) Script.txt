@@ -1,0 +1,141 @@
+=================================================================================================================
+개발환경
+=================================================================================================================
+VMware Player 설치
+https://www.vmware.com/kr/products/workstation-player/workstation-player-evaluation.html
+
+ubuntu 설치
+https://releases.ubuntu.com/18.04.5/?_ga=2.158996730.1931960103.1599736552-1888727197.1599548933
+
+SSH Server 설치
+terminal => sudo apt install openssh-server
+=================================================================================================================
+
+
+=================================================================================================================
+Bosh VM 배포
+=================================================================================================================
+PaaS-TA 설치 파일 다운로드
+sudo apt update
+sudo apt upgrade 
+sudo apt install curl
+sudo apt install zip
+혹은
+sudo apt install unzip
+mkdir workspace
+cd workspace
+curl -Lo paasta-5.0.zip http://45.248.73.44/index.php/s/Qi2zGPnGNEjb4Ax/download
+unzip paasta-5.0.zip
+mv bosh-lite paasta-5.0
+
+Bosh cli설치
+curl -Lo ./bosh https://s3.amazonaws.com/bosh-cli-artifacts/bosh-cli-6.1.0-linux-amd64 
+chmod +x ./bosh 
+sudo mv ./bosh /usr/local/bin/bosh 
+bosh -v
+
+종속성 파일 설치(18.04기준)
+sudo apt-get install -y build-essential zlibc zlib1g-dev ruby ruby-dev openssl libxslt1-dev libxml2-dev libssl-dev libreadline7 libreadline-dev libyaml-dev libsqlite3-dev sqlite3 
+
+Deploy Bosh VM
+cd ~/workspace/paasta-5.0/deployment/bosh-deployment
+chmod 755 *.sh
+./deploy-openstack.sh
+
+Alias 설정
+bosh alias-env micro-bosh -e 10.0.1.6 --ca-cert <(bosh int warden/creds.yml --path /director_ssl/ca) 
+
+Bosh login 쉘 스크립트 생성
+vi login.sh
+#!/usr/bin
+
+export BOSH_CA_CERT=$(bosh int ./openstack/creds.yml --path /director_ssl/ca)
+export BOSH_CLIENT=admin
+export BOSH_CLIENT_SECRET=$(bosh int ./openstack/creds.yml --path /admin_password) 
+
+Bosh login 쉘 적용
+source login.sh
+
+Bosh login 확인
+bosh -e micro-bosh env
+
+jumpbox key 생성 (Bosh VM 로그인 용) 
+bosh int openstack/creds.yml --path /jumpbox_ssh/private_key > jumpbox.key 
+chmod 600 jumpbox.key
+ssh jumpbox@<openstack ip> -i jumpbox.key
+
+Bosh로 배포된 프로그램 process 확인 (bosh vm or paas-ta vm ssh 접속 후 이용)
+sudo su
+monit summary 
+
+credhub cli 설치
+cd ~
+wget https://github.com/cloudfoundry-incubator/credhub-cli/releases/download/2.0.0/credhub-linux-2.0.0.tgz
+tar -xvf credhub-linux-2.0.0.tgz
+chmod +x credhub 
+sudo mv credhub /usr/local/bin/credhub 
+credhub --version
+
+credhub shell 생성
+cd ~/workspace/paasta-5.0/deployment/bosh-deployment
+vi credhub_login.sh
+
+#!/usr/bin
+
+export CREDHUB_CLIENT=credhub-admin 
+export CREDHUB_SECRET=$(bosh int --path /credhub_admin_client_secret openstack/creds.yml) 
+export CREDHUB_CA_CERT=$(bosh int --path /credhub_tls/ca openstack/creds.yml) 
+
+credhub 로그인
+source credhub_login.sh
+credhub login -s https://10.0.1.6:8844 --skip-tls-validation 
+
+ 
+=================================================================================================================
+PaaS-TA 배포
+=================================================================================================================
+ 
+Bosh login
+cd ~/workspace/paasta-5.0/deployment/bosh-deployment
+source login.sh
+
+update cloud config (openstack-cloud-config.yml 수정 필요)
+cd ~/workspace/paasta-5.0/deployment/cloud-config
+vi openstack-cloud-config.yml
+===========================================
+as-is
+vm_type:
+name: minimal
+cloud_properties:
+instance_type: m1.tiny
+
+to-be - 컴퓨터 사양에 따라 ds1G 이상 사용
+vm_type:
+name: minimal
+cloud_properties:
+instance_type: ds1G
+===========================================
+bosh -e micro-bosh update-cloud-config openstack-cloud-config.yml (업데이트)
+
+runtime config 등록
+cd ~/workspace/paasta-5.0/deployment/bosh-deployment
+./update-runtime-config.sh
+bosh -e micro-bosh configs
+
+stemcell 등록
+cd ~/workspace/paasta-5.0/stemcell/paasta
+bosh -e micro-bosh upload-stemcell bosh-stemcell-315.64-warden-boshlite-ubuntu-xenial-go_agent.tgz
+bosh -e micro-bosh stemcells
+
+PaaS-TA 배포
+cd ~/workspace/paasta-5.0/deployment/paasta-deployment
+chmod +x ./*.sh
+vi deploy-openstack.sh
+===========================================
+as-is
+bosh -d paasta -n deploy paasta-deployment.yml
+
+to-be
+bosh -e micro-bosh -d paasta -n deploy paasta-deployment.yml
+===========================================
+./deploy-openstack.sh
