@@ -1,6 +1,6 @@
 # Openstack PaaS-TA 
-   - [Openstack 설치](#-openstack-설치)
-   - [Openstack 환경설정](#-openstack-환경설정)
+   - [Openstack 설치](#openstack-설치)
+   - [Openstack 환경설정](#openstack-환경설정)
    - [bosh 설치](#bosh-설치)
    - [PaaS-TA 설치](#PaaS-TA-설치)
    - [PaaS-TA 까지 설치 시 네트워크 구성도 및 필요 리소스](#PaaS-TA-까지-설치-시-네트워크-구성도-및-필요-리소스)
